@@ -118,8 +118,12 @@ var summarize = function(results) {
 var synchronous_mock_download = function(inst) {
     var tm = new Timer('  ' + inst.url);
     tm.start();
-    var delay_us =  1000000;
-    sleep.usleep(delay_us);
+    // var delay_us =  450000;
+    //var delay_us = 1000000
+    var delay_us = inst.delay_ms; //storing delay time from inst
+    delay_us = delay_us.toFixed(0); //removing digits after decimal point to avoid errors
+    sleep.usleep(Number(delay_us)*1000) //Synchronous elapsed time
+    // sleep.usleep(delay_us);
     tm.elapsed();
     return inst.delay_ms;
 };

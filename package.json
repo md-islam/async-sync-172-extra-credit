@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Spoorthya/sync-async-node/issues"
   },
-  "homepage": "https://github.com/Spoorthya/sync-async-node#readme"
+  "homepage": "https://github.com/Spoorthya/sync-async-node#readme",
+  "dependencies": {
+    "async": "~2.1.4",
+    "underscore": "~1.8.3",
+    "sleep": "~5.0.0"
+  }
 }
